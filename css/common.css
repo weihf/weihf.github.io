@@ -612,9 +612,6 @@ a:hover {
 .footer .boundary {
 	padding: 15px 0;
 }
-.qrcode {
-	float: left;
-}
 .qrcode img {
 	width: 60px;
 	height: 60px;
@@ -624,7 +621,17 @@ a:hover {
 	margin: 7px 0px 0px 10px;
 	float: left;
 }
-.cpr {
-	margin-top: 7px;
-	float: right;
+@media (min-width: 750px) {
+	.qrcode {
+		float: left;
+	}
+	.cpr {
+		margin-top: 7px;
+		float: right;
+	}
+}
+@media (max-width: 749px) {
+	.cpr {
+		margin-top: 8px;
+	}
 }
