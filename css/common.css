@@ -570,12 +570,16 @@ a:hover {
 		float: right;
 	}
 	.projectNothumb {
-		 padding-right: 10px !important;
+		padding-right: 10px !important;
 	}
 }
 @media (max-width: 749px) {
 	.project__thumb {
 		width: 90%;
+	}
+	.project {
+		margin-bottom: 26px;
+		padding-bottom: 16px;
 	}
 }
 @media (min-width: 750px) and (max-width: 959px) {
@@ -622,5 +626,5 @@ a:hover {
 }
 .cpr {
 	margin-top: 7px;
-float: right;
+	float: right;
 }
