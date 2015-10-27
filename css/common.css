@@ -601,7 +601,26 @@ a:hover {
 	}
 }
 /*----------------------------------------------------
-  7. footer
+  7. aboutMe
+------------------------------------------------------*/
+
+.photo {
+	color: #666;
+	line-height: 2em;
+}
+.introduction h2 {
+	font-size: 1.5em;
+	margin: 15px 0;
+	text-align: left;
+}
+.photo img {
+	max-width: 100%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+/*----------------------------------------------------
+  8. footer
 ------------------------------------------------------*/
 
 .footer {
@@ -634,4 +653,23 @@ a:hover {
 	.cpr {
 		margin-top: 8px;
 	}
+}
+/*----------------------------------------------------
+  9. forIE.html
+------------------------------------------------------*/
+.forIE {
+	background: #333;
+	color: #f6f6f6;
+	line-height: 1.5em;	
+	
+}
+.container {
+	margin:30px;
+}
+.forIE p {
+	text-indent: 2em;
+}
+.forIE strong {
+	color: #f60;
+	font-size: 1.5em;
 }
