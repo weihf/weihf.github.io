@@ -548,6 +548,9 @@ a:hover {
 .tagPs {
 	background: #80BD01;
 }
+.tagBs {
+	background: #CC0099;
+}
 .projectLink {
 	position: absolute;
 	right: 0;
