@@ -6,18 +6,20 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<title>韦红芳个人简历</title>
 		<link rel="stylesheet" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
 	</head>
 
 	<body>
 		<!--[if lt IE 9]>
-<script>
-!function(body) {
-body.style.width = body.style.height = '100%';
-body.parentNode.style.overflow = body.style.overflow = 'hidden';
-}(document.body);
-</script>
-<iframe src="4oie.html" frameborder="0" scrolling="no" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 99999;"></iframe>
-<![endif]-->
+		<script>
+			!function(body) {
+			body.style.width = body.style.height = '100%';
+			body.parentNode.style.overflow = body.style.overflow = 'hidden';
+			}(document.body);
+			</script>
+			<iframe src="4oie.html" frameborder="0" scrolling="no" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 99999;"></iframe>
+		<![endif]-->
 		<header class="header">
 			<div class="boundary clearfix">
 				<h1 class="logo">
@@ -32,9 +34,9 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 						<li class="email">
 							weihfjob@163.com
 						</li>
-						<li class="downloadResume">
-							<a href="韦红芳简历-页面重构.docx">下载简历</a>
-						</li>
+						<!--<li class="downloadResume">
+							<a class="btn" href="韦红芳简历-页面重构.docx">下载简历</a>
+						</li>-->
 					</ul>
 				</address>
 			</div>
@@ -51,10 +53,10 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 							<div class="photo">
 								<img src="img/myPhoto.png" style="float: left;" />
 								<h2>韦红芳</h2>
-								<p>性别:女 | 出生年月:1985-01 | 居住地:深圳</p>
-								2011年1月份开始页面重构了解前端开发，有网站、系统、手机端的界面设计经验。在过去的两份工作中，基本都在制作网站和系统的页面，非常熟悉页面重构，同时也参与界面的设计工作，有一定的设计基础。能熟练使用HTML5，CSS3和JS（jquery、zepto)， 对于流行的前端开发框架，如Bootstrap、JQuery Mobile也能掌握。能使用svn、git等项目管理工具。非常热爱读书，主动关注和学习新技术。
+								<p class="color999 sex">性别:女 | 出生年月:1985-01 | 居住地:深圳</p>
+								2011年1月份开始页面重构并了解前端开发，有网站、系统、手机端的界面设计经验。在过去的两份工作中，基本都在制作网站和系统的HTML页面，非常熟悉页面重构。能熟练使用HTML5，CSS3和JS（jquery)，熟悉常见的浏览器兼容问题及其解决办法。 对于流行的前端开发框架，如Bootstrap、JQuery Mobile也能掌握。能使用git、svn等项目管理工具。非常热爱读书，主动关注和学习新技术。
 							</div>
-							<p>说明：本人右腿残疾，残疾情况是不需要借助轮椅或拐杖可独立行走，走的不漂亮。如贵单位不接受与残障人士共事，请勿联系，谢谢:)</p>
+							<p class="color999 sm">说明：本人右腿残疾，残疾情况是不需要借助轮椅或拐杖可独立行走，走的不漂亮。如贵单位不接受与残障人士共事，请勿联系，谢谢:)</p>
 						</div>
 					</div>
 			</section>
@@ -62,56 +64,72 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 				<div class="boundary">
 					<header class="sectionHeader">
 						<h2 class="sectionHeaderTitle">擅长页面重构，熟悉前端</h2>
-						<h3 class="sectionHeaderSubtitle">4年工经验，编写艺术般的代码</h3>
+						<h3 class="sectionHeaderSubtitle">4年工经验，有扎实的重构基础</h3>
 					</header>
 					<div class="sectionBody">
 						<ul class="tech">
-							<li class="barHtml5css3 mastered">
-								<h4>HTML5 & CSS3</h4>
-								<div class="detail fade">
-									<ul class="list">
-										<li>理解结构、表现、行为分离及语义化，能使用合适的结构编写兼容主流浏览器的页面布局；</li>
-										<li>了解HTML 5新标签的语义</li>
-										<li>能写响应式页面，了解CSS3动画</li>
-									</ul>
+							<li>
+								<div class="progress">
+									<div class="progress-inner w85"></div>
 								</div>
+								<h4>HTML5</h4>
+								<ul class="list">
+									<li>理解结构、表现、行为分离及语义化，能使用合适的结构编写兼容主流浏览器的页面布局；</li>
+									<li>了解HTML 5新标签的语义</li>
+									<li>目前在学习HTML Canvas，希望有机会可以在项目中更多地使用Canvas画布元素</li>
+								</ul>
 							</li>
-							<li class="barJs practised">
-								<h4>Javascript</h4>
-								<div class="detail fade">
-									<ul class="list">
-										<li>了解原生javascript；</li>
-										<li>能利用jQuery实现页面中一些基本的页面交互效果。</li>
-									</ul>
+							<li>
+								<div class="progress">
+									<div class="progress-inner w85"></div>
 								</div>
+								<h4>CSS3</h4>
+								<ul class="list">
+									<li>熟练掌握盒模式、弹性盒布局</li>
+									<li>可以运用媒体查询，能写响应式页面</li>
+									<li>会用CSS3完成简单的动画</li>
+								</ul>
+							</li>
+							<li>
+								<div class="progress green">
+									<div class="progress-inner w80"></div>
+								</div>
+								<h4>Javascript(JQuery)</h4>
+								<ul class="list">
+									<li>了解原生javascript；</li>
+									<li>能利用jQuery实现页面中一些基本的页面交互效果。</li>
+								</ul>
 							</li>
 							<li class="barBs">
+								<div class="progress green">
+									<div class="progress-inner w80"></div>
+								</div>
 								<h4>Bootstrap</h4>
-								<div class="detail fade">
-									<ul class="list">
-										<li>有实践项目经验</li>
-										<li>
-											能写兼容PC端和移动端的页面
-										</li>
-									</ul>
-								</div>
+								<ul class="list">
+									<li>有实践经验</li>
+									<li>
+										能写兼容PC端和移动端的页面
+									</li>
+								</ul>
 							</li>
 							<li class="barPs">
+								<div class="progress pink">
+									<div class="progress-inner w50"></div>
+								</div>
 								<h4>Photoshop</h4>
-								<div class="detail fade">
-									<ul class="list">
-										<li>有两年界面设计经验</li>
-										<li>能设计网站、系统、移动端的界面</li>
-									</ul>
-								</div>
+								<ul class="list">
+									<li>有两年界面设计经验</li>
+									<li>能设计网站、系统、移动端的界面</li>
+								</ul>
 							</li>
 							<li class="barPs">
-								<h4>JQuery Mobile</h4>
-								<div class="detail fade">
-									<ul class="list">
-										<li>能使用JQuery Mobile快速构建手机端页面</li>
-									</ul>
+								<div class="progress pink">
+									<div class="progress-inner w50"></div>
 								</div>
+								<h4>JQuery Mobile</h4>
+								<ul class="list">
+									<li>能使用JQuery Mobile快速构建手机端页面</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -121,7 +139,7 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 				<div class="boundary">
 					<header class="sectionHeader">
 						<h2 class="sectionHeaderTitle">长期专注页面重构</h2>
-						<h3 class="sectionHeaderSubtitle">有大型网站开发、优化经验</h3>
+						<h3 class="sectionHeaderSubtitle">能写高度还原设计图的静态页</h3>
 					</header>
 					<div class="sectionBody">
 						<div class="workExp">
@@ -137,7 +155,7 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 									<ul class="list">
 										<li>临床生殖管理系统、综合报表管理平台等产品的页面重构工作，以及桂林市个人住房信息查询系统、广西地方法规库、梧州政务网上平台等项目的页面重构工作</li>
 										<li>界面设计</li>
-										<li>配合开发人员进行界面进行调整与优化</li>
+										<li>配合开发人员进行界面调整与优化</li>
 									</ul>
 								</div>
 							</section>
@@ -152,8 +170,8 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 								<div class="copanyBody">
 									<ul class="list">
 										<li>根据UI设计图，利用html+css准确呈现符合逻辑、便于开发的Web页面，保证多浏览器的兼容性</li>
-										<li>使用Bootstrap来制作响应式网站　</li>
-										<li>参与对新人培训html+css的工作</li>
+										<li>使用Bootstrap来制作响应式网站，业余时间自行学习此框架</li>
+										<li>参与对新人进行html+css的培训工作</li>
 									</ul>
 								</div>
 							</section>
@@ -177,15 +195,17 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 						<h3 class="sectionHeaderSubtitle">业余项目与公司项目相互促进</h3>
 					</header>
 					<div class="sectionBody">
-						<section class="project projectNothumb clearfix">
+						<section class="project  clearfix">
 							<div class="projectIntro">
 								<header class="clearfix">
-									<h4>网宿科技</h4>
+									<div class="clearfix">
+										<h4>网宿科技</h4>
+										<a class="btn fr" href="http://www.chinanetcenter.com/" target="_blank">项目地址</a></div>
 									<ul class="tag">
 										<li class="tagHtml">HTML</li>
 										<li class="tagJs">Css</li>
 									</ul>
-									<a class="projectLink" href="http://www.chinanetcenter.com/" target="_blank">项目地址</a>
+
 								</header>
 								<ul class="list">
 									<li>负责网站首页、大部分子页面的静态页编写，确保主流浏览器的兼容性</li>
@@ -193,17 +213,19 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 								</ul>
 							</div>
 						</section>
-						<section class="project projectNothumb clearfix">
+						<section class="project clearfix">
 							<div class="projectIntro">
 								<header class="clearfix">
-									<h4>广西新豪智电子有限公司</h4>
+									<div class="clearfix">
+										<h4>广西新豪智电子有限公司</h4>
+										<a class="btn fr" href="http://www.gxxhz.com/index.jsp" target="_blank">项目地址</a></div>
 									<ul class="tag">
 										<li class="tagHtml">HTML</li>
 										<li class="tagCss">css</li>
 										<li class="tagJs">Javascript</li>
 										<li class="tagPs">Photoshop</li>
 									</ul>
-									<a class="projectLink" href="http://www.gxxhz.com/index.jsp" target="_blank">项目地址</a>
+
 								</header>
 								<ul class="list">
 									<li>负责整个网站的静态页编写</li>
@@ -212,17 +234,19 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 								</ul>
 							</div>
 						</section>
-						<section class="project projectNothumb clearfix">
+						<section class="project clearfix">
 							<div class="projectIntro">
 								<header class="clearfix">
-									<h4>投诉举报信箱</h4>
+									<div class="clearfix">
+										<h4>投诉举报信箱</h4>
+										<a class="btn fr" href="http://116.1.214.98:85/index.jsp" target="_blank">项目地址</a></div>
 									<ul class="tag">
 										<li class="tagHtml">HTML</li>
 										<li class="tagCss">css</li>
 										<li class="tagJs">Javascript</li>
 										<li class="tagPs">Photoshop</li>
 									</ul>
-									<a class="projectLink" href="http://116.1.214.98:85/index.jsp" target="_blank">项目地址</a>
+
 								</header>
 								<ul class="list">
 									<li>负责整个网站的静态页编写</li>
@@ -231,16 +255,19 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 								</ul>
 							</div>
 						</section>
-						<section class="project projectNothumb clearfix">
+						<section class="project clearfix">
 							<div class="projectIntro">
 								<header class="clearfix">
-									<h4>韦红芳个人简历</h4>
+									<div class="clearfix">
+										<h4>个人简历</h4>
+										<a class="btn fr" href="http://weihf.github.io/" target="_blank">项目地址</a>
+									</div>
 									<ul class="tag">
 										<li class="tagHtml">HTML 5</li>
 										<li class="tagCss">CSS 3</li>
 										<li class="tagJs">Javascript</li>
 									</ul>
-									<a class="projectLink" href="http://weihf.github.io/" target="_blank">项目地址</a>
+
 								</header>
 								<ul class="list">
 									<li>响应式网站</li>
@@ -248,16 +275,19 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 								</ul>
 							</div>
 						</section>
-						<section class="project projectNothumb clearfix">
+						<section class="project clearfix">
 							<div class="projectIntro">
 								<header class="clearfix">
-									<h4>广西民族文化艺术研究院网站</h4>
+									<div class="clearfix">
+										<h4>广西民族文化艺术研究院</h4>
+										<a class="btn fr" href="http://www.gxysyjy.com/" target="_blank">项目地址</a>
+									</div>
 									<ul class="tag">
 										<li class="tagHtml">HTML</li>
 										<li class="tagCss">CSS</li>
 										<li class="tagJs">Javascript</li>
 									</ul>
-									<a class="projectLink" href="http://www.gxysyjy.com/" target="_blank">项目地址</a>
+
 								</header>
 								<ul class="list">
 									<li>负责整个网站的静态页编写</li>
@@ -266,37 +296,23 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 								</ul>
 							</div>
 						</section>
-						<section class="project projectNothumb clearfix">
+						<section class="project clearfix">
 							<div class="projectIntro">
 								<header class="clearfix">
-									<h4>民间摄影</h4>
+									<div class="clearfix">
+										<h4>民间摄影</h4>
+										<div class="fr">
+											<a href="http://weihf.github.io/mjsy/" target="_blank" class="btn">项目地址</a></div>
+									</div>
 									<ul class="tag">
-										<li class="tagHtml">HTML</li>
-										<li class="tagCss">CSS</li>
+										<li class="tagHtml">HTML5</li>
+										<li class="tagCss">CSS3</li>
 										<li class="tagBs">Bootstrap</li>
 									</ul>
-									<a class="projectLink" href="http://weihf.github.io/mjsy/" target="_blank">项目地址</a>
 								</header>
 								<ul class="list">
 									<li>用bootstrap重写旧项目的页面，练手</li>
 									<li>大量运用流式栅格系统，对其有更深的理解</li>
-								</ul>
-							</div>
-						</section>
-						<section class="project projectNothumb clearfix">
-							<div class="projectIntro">
-								<header class="clearfix">
-									<h4>项目名称</h4>
-									<ul class="tag">
-										<li class="tagJs">Javascript</li>
-										<li class="tagHtml">HTML 5</li>
-									</ul>
-									<a class="projectLink" href="#" target="_blank">项目地址</a>
-								</header>
-								<ul class="list">
-									<li>负责整个网站的静态页编写</li>
-									<li>实现部分动态交互效果</li>
-									<li>负责整个网站的界面设计</li>
 								</ul>
 							</div>
 						</section>
@@ -311,22 +327,9 @@ body.parentNode.style.overflow = body.style.overflow = 'hidden';
 						<p>您还可以使用手机或iPad
 							<br>扫描左侧二维码打开本页</p>
 					</div>
-					<div class="cpr">						
-						<a href="#" title="Back To The Top">回顶</a>
-					</div>
 				</div>
 			</footer>
-			
-			<script>
-				$(document).ready(function() {
-					$('a[href=#top]').click(function() {
-						$('html, body').animate({
-							scrollTop: 0
-						}, 'slow');
-						return false;
-					});
-				});
-			</script>
+			<a id="backTop" title="Back To The Top">返回<br />顶部</a>
 	</body>
 
 </html>

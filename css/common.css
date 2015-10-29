@@ -2,21 +2,14 @@
     Author: weihf
     Description: weihf resume   
     1.  CSS Reset
-    2.  Document Setup
-    3.  Header Part
-        3.1 Slide show background control
-    4.  Background slider CSS style
-    5.  Menu Style
-    6.  About me Style
-    7.  Technical Skills Style
-    8.  Work Experience Style
-    9.  Education Style
-    10. Protfolio Style
-    11. Get in tuch Style
-    12. Footer Style
-    13. Responsive style
-        
-        
+    2.  header
+    3.  common section
+    4.  tech
+    5.  work experience
+    6.  project
+    7.  aboutMe
+    8.  footer
+    9.  forIE.html
 ---------------------------------------------------------------------------------
 /* 1. CSS Reset
 -------------------------------------------------------------------------------*/
@@ -88,6 +81,9 @@ a:hover {
 	visibility: hidden;
 	content: '.';
 }
+.fr {
+	float: right;
+}
 @media (max-width: 749px) {
 	.boundary {
 		margin: 0 20px;
@@ -134,10 +130,9 @@ a:hover {
 }
 .header address ul li {
 	padding-left: 24px;
-	background: url(../img/icon-sprites.png) no-repeat;
+	background: url(../img/sprites.png) no-repeat;
 	background-size: 20px auto;
 	margin-top: 8px;
-	height: 20px;
 	line-height: 20px;
 }
 .header address ul li.phone {
@@ -150,15 +145,25 @@ a:hover {
 	background: none;
 	padding-left: 0;
 }
-.header address ul li.downloadResume a {
+.header address ul li:last-of-type {
+	margin-right: 0;
+}
+.btn,.btn:visited {
 	background: #1d9bd9;
 	background: -webkit-linear-gradient(#3baee7, #08c);
 	background: linear-gradient(#3baee7, #08c);
-	color: #f6f6f6;
+	color: #fff;
 	border-radius: 0.4em;
 	padding: 0 0.5em;
 	font-size: 0.86em;
 	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+}
+.btn:hover {
+	background: #f90;
+	text-decoration: none;
 }
 @media (max-width: 320px) {
 	.myname,
@@ -250,74 +255,68 @@ a:hover {
 .tech > li {
 	-webkit-animation-duration: 1.5s;
 	animation-duration: 1.5s;
-	position: relative;
+}
+.progress {
+	background: rgba(69, 193, 229, 0.3);
+	height: 16px;
+	overflow: hidden;
+	border-radius: 5px;
+	width: 100%;
+	margin: 40px 0 5px 0;
+}
+.progress-inner {
+	background: rgba(69, 193, 229, 0.8);
+	height: 100%;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
 }
 .tech h4 {
-	height: 40px;
-	line-height: 40px;
-	padding-left: 10px;
 	overflow: hidden;
-	border-left: 3px solid;
-	border-left: 3px solid #FDBC40;
-	color: #FF742A;
-	background-color: #FFF6DD;
-	border-color: #FDBC40;
+	font-size: 1.2rem;
+	font-family: 'Microsoft JhengHei', 'Microsoft YaHei', 'STHeiti SC', 'SimHei';
+	color: #333;
 }
-.practised h4 {
-	color: #6e9c0f;
-	background-color: #eaf6d0;
-	border-color: #80bd01;
+.tech .list {
+	color: #666;
 }
-.mastered h4 {
-	color: #2a7da9;
-	background-color: #d6efff;
-	border-color: #3498db;
+.green {
+	background: rgba(128, 189, 1, 0.3);
 }
-.detail {
-	position: absolute;
-	left: 150px;
-	top: 12px;
-	z-index: 9999;
-	max-width: 350px;
-	padding: 10px;
-	background: rgba(255, 255, 255, 0.8);
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-	display: none;
+.green .progress-inner {
+	background: #80bd01;
 }
-.barHtml5css3 {
-	-webkit-animation-name: barHtml5css3;
-	animation-name: barHtml5css3;
-	width: 90%;
+.pink {
+	background: rgba(253, 188, 64, 0.3);
 }
-.barJs {
-	-webkit-animation-name: barJs;
-	animation-name: barJs;
-	width: 80%;
+.pink .progress-inner {
+	background: #fdbc40;
 }
-.barBs,
-.barPs {
-	-webkit-animation-name: barJs;
-	animation-name: barJs;
-	width: 70%;
+.w85 {
+	-webkit-animation-name: eip;
+	animation-name: eip;
 }
-@-webkit-keyframes barHtml5css3 {
+@-webkit-keyframes eip {
 	0% {
 		width: 0;
 	}
 	100% {
-		width: 90%;
+		width: 85%;
 	}
 }
-@keyframes barHtml5css3 {
+@keyframes eip {
 	0% {
 		width: 0;
 	}
 	100% {
-		width: 90%;
+		width: 85%;
 	}
 }
-@-webkit-keyframes barJs {
+.w80 {
+	-webkit-animation-name: ei;
+	animation-name: ei;
+}
+@-webkit-keyframes ei {
 	0% {
 		width: 0;
 	}
@@ -325,7 +324,7 @@ a:hover {
 		width: 80%;
 	}
 }
-@keyframes barJs {
+@keyframes ei {
 	0% {
 		width: 0;
 	}
@@ -333,127 +332,24 @@ a:hover {
 		width: 80%;
 	}
 }
-@-webkit-keyframes barBs {
+.w50 {
+	-webkit-animation-name: se;
+	animation-name: se;
+}
+@-webkit-keyframes se {
 	0% {
 		width: 0;
 	}
 	100% {
-		width: 70%;
+		width: 50%;
 	}
 }
-@keyframes barBs {
+@keyframes se {
 	0% {
 		width: 0;
 	}
 	100% {
-		width: 70%;
-	}
-}
-@-webkit-keyframes barPs {
-	0% {
-		width: 0;
-	}
-	100% {
-		width: 70%;
-	}
-}
-@keyframes barPs {
-	0% {
-		width: 0;
-	}
-	100% {
-		width: 70%;
-	}
-}
-.detail {
-	position: absolute;
-	left: 150px;
-	top: 12px;
-	z-index: 9999;
-	max-width: 350px;
-	padding: 10px;
-	background: rgba(255, 255, 255, 0.8);
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-	display: none;
-}
-.fade {
-	-webkit-animation: fadeIn 0.8s;
-	animation: fadeIn 0.8s;
-}
-@-webkit-keyframes fadeIn {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
-	}
-}
-@keyframes fadeIn {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
-	}
-}
-@media (min-width: 750px) {
-	.tech > li {
-		margin-bottom: 20px;
-	}
-	.tech > li:hover .detail {
-		display: block;
-		font-size: 0.875em;
-		cursor: default;
-	}
-	.fade {
-		-webkit-animation: fadeIn 0.8s;
-		animation: fadeIn 0.8s;
-	}
-	@-webkit-keyframes fadeIn {
-		0% {
-			display: none;
-			opacity: 0;
-		}
-		1% {
-			display: block;
-			opacity: 0;
-		}
-		100% {
-			display: block;
-			opacity: 1;
-		}
-	}
-	@keyframes fadeIn {
-		0% {
-			display: none;
-			opacity: 0;
-		}
-		1% {
-			display: block;
-			opacity: 0;
-		}
-		100% {
-			display: block;
-			opacity: 1;
-		}
-	}
-}
-@media (max-width: 749px) {
-	.tech > li {
-		margin-bottom: 15px;
+		width: 50%;
 	}
 }
 /*----------------------------------------------------
@@ -513,6 +409,7 @@ a:hover {
 
 .project {
 	border-bottom: 2px dashed #ccc;
+	padding: 15px 0;  
 }
 .project:last-child {
 	border-bottom: none;
@@ -526,7 +423,9 @@ a:hover {
 	font-size: 1.2em;
 	font-weight: bold;
 	margin-bottom: 5px;
+	float: left;
 }
+
 .tag li {
 	padding: 2px 5px;
 	border-radius: 3px;
@@ -552,68 +451,21 @@ a:hover {
 	background: #CC0099;
 }
 .projectLink {
-	position: absolute;
-	right: 0;
-	bottom: 0;
+ float: right;
 }
-.projectThumb img {
-	width: 100%;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
-}
-@media (min-width: 750px) {
-	.project {
-		margin-bottom: 36px;
-		padding: 0 0 20px 10px;
-	}
-	.projectIntro {
-		width: 100%;
-		float: left;
-	}
-	.projectThumb {
-		float: right;
-	}
-	.projectNothumb {
-		padding-right: 10px !important;
-	}
-}
-@media (max-width: 749px) {
-	.project__thumb {
-		width: 90%;
-	}
-	.project {
-		margin-bottom: 26px;
-		padding-bottom: 16px;
-	}
-}
-@media (min-width: 750px) and (max-width: 959px) {
-	.project {
-		padding-right: 290px;
-	}
-	.projectThumb {
-		width: 250px;
-		margin-right: -280px;
-	}
-}
-@media (min-width: 960px) {
-	.project {
-		padding-right: 380px;
-	}
-	.projectThumb {
-		width: 320px;
-		margin-right: -370px;
-	}
-}
+
 /*----------------------------------------------------
   7. aboutMe
 ------------------------------------------------------*/
 
 .photo {
-	color: #666;
+	color: #333;
 	line-height: 2em;
 }
 .introduction h2 {
 	font-size: 1.5em;
 	margin: 15px 0;
+	margin-bottom: 0;
 	text-align: left;
 }
 .photo img {
@@ -621,7 +473,15 @@ a:hover {
 	margin-right: 20px;
 	margin-bottom: 20px;
 }
-
+.color999 {
+	color: #999;
+}
+.sm {
+	margin-top: 0.8em;
+}
+.sex {
+	margin-bottom: 1em;
+}
 /*----------------------------------------------------
   8. footer
 ------------------------------------------------------*/
@@ -643,6 +503,25 @@ a:hover {
 	margin: 7px 0px 0px 10px;
 	float: left;
 }
+#backTop {
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	background: #d6efff;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	color: #3498db;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 1.5em;
+}
+#backTop:hover {
+	text-decoration: none;
+	color: #d6efff;
+	background: #3498db;
+}
 @media (min-width: 750px) {
 	.qrcode {
 		float: left;
@@ -660,14 +539,14 @@ a:hover {
 /*----------------------------------------------------
   9. forIE.html
 ------------------------------------------------------*/
+
 .forIE {
 	background: #333;
 	color: #f6f6f6;
-	line-height: 1.5em;	
-	
+	line-height: 1.5em;
 }
 .container {
-	margin:30px;
+	margin: 30px;
 }
 .forIE p {
 	text-indent: 2em;
