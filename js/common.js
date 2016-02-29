@@ -18,4 +18,24 @@ $(function() {
 			return false;
 		});
 	});
+	var navHeight = $(".navWrap").offset().top;
+	$(window).scroll(function() {
+		var scrollHeight = $(this).scrollTop();
+		if (scrollHeight > navHeight) {
+			$(".navWrap").addClass("fix-top");
+			$(".main").css("padding-top", $(".navWrap").outerHeight() + 50);
+		} else {
+			$(".navWrap").removeClass("fix-top");
+			$(".main").css("padding-top", 0);
+		}
+	})
+	$(".nav a").click(function() {
+		$(this).addClass("select").siblings().removeClass("select");
+		var section=$(this).attr("href");
+		$(section).addClass("topHeight");
+	})
+	$(window).scroll(function(){
+		$(".section").removeClass("topHeight");
+	})
+	
 })
