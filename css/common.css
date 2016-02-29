@@ -567,6 +567,9 @@ a:hover {
 	float: left;
 }
 
+.projectIntro header h4 a {
+	color: #333;
+}
 .tag li {
 	padding: 2px 5px;
 	border-radius: 3px;
