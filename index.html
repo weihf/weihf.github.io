@@ -414,17 +414,4 @@
 			</footer>
 			<a id="backTop" title="Back To The Top">返回<br />顶部</a>
 	</body>
-	<script>
-		$(function() {
-			$("#nav a").click(function() {
-				var target = $(this).attr("href");
-				var targetScroll = $(target).offset().top - 50;
-				$("html,body").animate({
-					scrollTop: targetScroll
-				}, 300);
-				return false;
-			});
-		});
-	</script>
-
 </html>

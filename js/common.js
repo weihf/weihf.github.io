@@ -31,11 +31,22 @@ $(function() {
 	})
 	$(".nav a").click(function() {
 		$(this).addClass("select").siblings().removeClass("select");
-		var section=$(this).attr("href");
+		var section = $(this).attr("href");
 		$(section).addClass("topHeight");
 	})
-	$(window).scroll(function(){
+	$(window).scroll(function() {
 		$(".section").removeClass("topHeight");
 	})
-	
+
+	//导航
+
+	$("#nav a").click(function() {
+		var target = $(this).attr("href");
+		var targetScroll = $(target).offset().top - 50;
+		$("html,body").animate({
+			scrollTop: targetScroll
+		}, 300);
+		return false;
+	});
+
 })
