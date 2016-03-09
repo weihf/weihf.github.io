@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/common.css" />
 		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/nav.js"></script>
 	</head>
 
 	<body>
@@ -42,12 +43,13 @@
 			</div>
 		</header>
 		<div class="navWrap clearfix">
-			<nav class="boundary flex nav">
-				<a href="#about">关于我</a>
-				<a href="#tech">技能</a>
-				<a href="#experience">经历</a>
-				<a href="#works">作品</a>
-			</nav>
+			<ul class="boundary flex nav" id="nav">
+				<li><a href="#about">关于我</a></li>
+
+				<li><a href="#tech">技能</a></li>
+				<li><a href="#experience">经历</a></li>
+				<li><a href="#works">作品</a></li>
+			</ul>
 		</div>
 		<div class="main">
 			<section id="about" class="section">
@@ -62,7 +64,7 @@
 								<img src="img/myPhoto.png" style="float: left;" />
 								<h2>韦红芳</h2>
 								<p class="color999 sex">性别:女 | 出生年月:1985-01 | 居住地:深圳</p>
-								长期从事前端开发工作，偏页面重构。在过去的两份工作中，基本都在制作网站和系统的HTML页面，非常熟悉页面重构。能熟练使用HTML5，CSS3和JS（jquery)，熟悉常见的浏览器兼容问题及其解决办法。 对于流行的前端开发框架，如Bootstrap、JQuery Mobile也能掌握。有网站、系统、手机端的界面设计经验。能使用git、svn等项目管理工具。非常热爱读书，主动关注和学习新技术。 说明：本人右腿残疾，残疾情况是不需要借助轮椅或拐杖可独立行走，走的不漂亮。如贵单位不接受与残障人士共事，请勿联系，谢谢:)
+								长期从事前端开发工作，偏页面重构。在过去的两份工作中，基本都在制作网站和系统的HTML页面，非常熟悉页面重构。能熟练使用HTML5，CSS3和JS（jquery)，熟悉常见的浏览器兼容问题及其解决办法。 对于流行的前端开发框架，如Bootstrap、JQuery Mobile也能掌握。有网站、系统、手机端的界面设计经验。能使用git、svn等项目管理工具。非常热爱读书，主动关注和学习新技术。
 							</div>
 							<p class="color999 sm">说明：本人右腿残疾，残疾情况是不需要借助轮椅或拐杖可独立行走，走的不漂亮。如贵单位不接受与残障人士共事，请勿联系，谢谢:)</p>
 						</div>
@@ -75,83 +77,6 @@
 						<h3 class="sectionHeaderSubtitle">4年工经验，有扎实的重构基础</h3>
 					</header>
 					<div class="sectionBody">
-						<!--<ul class="tech">
-							<li>
-								<div class="progress">
-									<div class="progress-inner w85" style="width: 85%;"></div>
-								</div>
-								<h4>HTML5</h4>
-								<ul class="list">
-									<li>理解结构、表现、行为分离及语义化，能使用合适的结构编写兼容主流浏览器的页面布局；</li>
-									<li>了解HTML 5新标签的语义</li>
-									<li>目前在学习HTML Canvas，希望有机会可以在项目中更多地使用Canvas画布元素</li>
-								</ul>
-							</li>
-							<li>
-								<div class="progress">
-									<div class="progress-inner w85" style="width: 85%;"></div>
-								</div>
-								<h4>CSS3</h4>
-								<ul class="list">
-									<li>熟练掌握盒模式、弹性盒布局</li>
-									<li>可以运用媒体查询，能写响应式页面</li>
-									<li>会用CSS3完成简单的动画</li>
-								</ul>
-							</li>
-							<li>
-								<div class="progress green">
-									<div class="progress-inner w80" style="width: 80%;"></div>
-								</div>
-								<h4>Javascript(JQuery)</h4>
-								<ul class="list">
-									<li>了解原生javascript；</li>
-									<li>能利用jQuery实现页面中一些基本的页面交互效果。</li>
-								</ul>
-							</li>
-							<li class="barBs">
-								<div class="progress green">
-									<div class="progress-inner w80" style="width: 80%;"></div>
-								</div>
-								<h4>Bootstrap</h4>
-								<ul class="list">
-									<li>有实践经验</li>
-									<li>
-										能写兼容PC端和移动端的页面
-									</li>
-								</ul>
-							</li>
-							<li class="barBs">
-								<div class="progress pink">
-									<div class="progress-inner w50" style="width: 50%;"></div>
-								</div>
-								<h4>Sass</h4>
-								<ul class="list">
-									<li>会在项目中使用Sass</li>
-									<li>
-										了解其语法、嵌套、mixin、继承等
-									</li>
-								</ul>
-							</li>
-							<li class="barPs">
-								<div class="progress pink">
-									<div class="progress-inner w50" style="width: 50%;"></div>
-								</div>
-								<h4>Photoshop</h4>
-								<ul class="list">
-									<li>有两年界面设计经验</li>
-									<li>能设计网站、系统、移动端的界面</li>
-								</ul>
-							</li>
-							<li class="barPs">
-								<div class="progress pink">
-									<div class="progress-inner w50" style="width: 50%;"></div>
-								</div>
-								<h4>JQuery Mobile</h4>
-								<ul class="list">
-									<li>能使用JQuery Mobile快速构建手机端页面</li>
-								</ul>
-							</li>
-						</ul>-->
 						<dl class="tech">
 							<dd>
 								<h3>工具篇</h3>
@@ -220,7 +145,7 @@
 									</li>
 								</ul>
 							</dd>
-						</ul>
+							</ul>
 					</div>
 				</div>
 			</section>
@@ -489,5 +414,17 @@
 			</footer>
 			<a id="backTop" title="Back To The Top">返回<br />顶部</a>
 	</body>
+	<script>
+		$(function() {
+			$("#nav a").click(function() {
+				var target = $(this).attr("href");
+				var targetScroll = $(target).offset().top - 50;
+				$("html,body").animate({
+					scrollTop: targetScroll
+				}, 300);
+				return false;
+			});
+		});
+	</script>
 
 </html>
