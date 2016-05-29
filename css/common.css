@@ -225,19 +225,21 @@ a:hover {
 }
 
 .navWrap {
-	border-top: 1px solid #d6d6d6;
-	border-bottom: 1px solid #d6d6d6;
 	margin-top: 1rem;
-	background: #f8f8f8;
+	background: #2c6787;
 	width: 100%;
 }
+
 .nav li {
 	display: block;
 	flex: 1;
 	text-align: center;
 	line-height: 3rem;
-	color: #333;
 	position: relative;
+}
+
+.nav li a {
+	color: #fff;
 }
 
 .nav li a.select {
@@ -267,6 +269,7 @@ a:hover {
 	margin: 0;
 	z-index: 999;
 }
+
 @media (max-width: 320px) {
 	.myname,
 	.jobtitle {
@@ -368,10 +371,12 @@ a:hover {
 	margin: 0 1.5%;
 	vertical-align: top;
 }
+
 .tech > dd ul li {
 	clear: both;
 	overflow: hidden;
 }
+
 .tech > dd ul li tt {
 	font-family: Georgia, serif;
 	width: 40%;
@@ -423,18 +428,23 @@ a:hover {
 .green {
 	background: #80bd01;
 }
+
 .blue {
 	background: #3360A3;
 }
+
 .yellow {
 	background: #fdbc40;
 }
+
 .black {
-	background:#34495E;
+	background: #34495E;
 }
+
 .lightblue {
 	background: #19B1E0;
 }
+
 .w50 {
 	width: 50%;
 }
@@ -454,6 +464,7 @@ a:hover {
 .w90 {
 	width: 90%;
 }
+
 @media (max-width: 979px) {
 	.tech > dd {
 		width: 100%;
@@ -556,6 +567,24 @@ a:hover {
 	color: #333;
 }
 
+.list li {
+	list-style-type: disc;
+}
+
+.list li a {
+	color: #666;
+}
+
+.company {
+	float: left;
+	width: 50%;
+}
+
+.person {
+	float: right;
+	width: 50%;
+}
+
 .tag li {
 	padding: 2px 5px;
 	border-radius: 3px;
@@ -595,30 +624,61 @@ a:hover {
 	font-size: 1.3rem;
 	font-family: 'Microsoft JhengHei', 'Microsoft YaHei', 'STHeiti SC', 'SimHei';
 	padding: 1rem 0;
+	width: 90%;
+	margin-bottom: 20px;
 }
 
 .projectType:first-child {
 	padding-top: 0;
 }
 
-.linkImg {
-	margin: 0 auto;
-	text-align: center;
-}
-
-.linkImg img {
-	max-width: 80%;
+.personLink {
 	display: block;
+	width: 90%;
+	background: #fff;
+	padding: 30px 0;
+	border-radius: 10px;
+	background: url(../img/person.jpg) no-repeat;
 }
 
-.webApp {
-	display: flex;
-	justify-content: flex-start;
+.personLink a {
+	background: rgba(255, 255, 255, .8);
+	color: #333;
+	width: 80%;
+	padding: 10px 0;
+	display: block;
+	margin: 0;
+	cursor: pointer;
+}
+
+.personLink p {
+	margin: 0 30px;
+	letter-spacing: 10px;
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	font-family: 'Microsoft JhengHei', 'Microsoft YaHei', 'STHeiti SC', 'SimHei';
+}
+
+.personLink a:hover {
+	text-decoration: none;
 }
 
 @media (max-width: 749px) {
 	.webApp {
 		flex-direction: column;
+	}
+	.company,
+	.person {
+		float: none;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.projectType {
+		width: 100%;
+	}
+	.personLink p {
+		font-size: 18px;
 	}
 }
 
@@ -669,8 +729,8 @@ a:hover {
 ------------------------------------------------------*/
 
 .footer {
-	border-top: 1px solid #e8e8e8;
-	color: #888;
+	background: #2c6787;
+	color: #edecf2;
 	font-size: 0.875em;
 }
 
