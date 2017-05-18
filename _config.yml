@@ -2,7 +2,7 @@
 encoding: utf-8
 title: Weihf
 description: 韦红芳的个人博客
-baseurl: "/jekyll_demo" 
+baseurl: "https://weihf.github.io" 
 # baseurl: ''
 github_username:  weihf
 paginate: 8
