@@ -1,250 +1,50 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: test
+---
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-		<title>韦红芳个人简历</title>
-		<link rel="stylesheet" href="css/common.css" />
-		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/common.js"></script>
-		<script type="text/javascript" src="js/nav.js"></script>
-	</head>
+<div class="home">
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <span class="post-meta">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </span>
+            <a class="preview" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.content | strip_html | strip_newlines | truncate: 320 }}
+            </a>
+            <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">
+                Read More
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 
-	<body>
-		<!--[if lt IE 9]>
-		<script>
-			!function(body) {
-			body.style.width = body.style.height = '100%';
-			body.parentNode.style.overflow = body.style.overflow = 'hidden';
-			}(document.body);
-			</script>
-			<iframe src="4oie.html" frameborder="0" scrolling="no" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 99999;"></iframe>
-		<![endif]-->
-		<header class="header">
-			<div class="boundary clearfix">
-				<h1 class="logo">
-					<span class="myname">韦红芳</span>
-					<span class="jobtitle">页面重构/前端工程师</span>
-				</h1>
-				<address>
-					<ul>
-						<li class="phone">
-							13554896429
-						</li>
-						<li class="email">
-							weihfjob@163.com
-						</li>
-					</ul>
-				</address>
-			</div>
-		</header>
-		<div class="navWrap clearfix">
-			<ul class="boundary flex nav" id="nav">
-				<li><a href="#about">关于我</a></li>
+    {% if paginator.total_pages > 1 %}
+    <div class="page clearfix">
+        {% if paginator.previous_page %}
+            <a class="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl }}"></a> 
+        {% endif %} 
 
-				<li><a href="#tech">技能</a></li>
-				<li><a href="#experience">经历</a></li>
-				<li><a href="#works">作品</a></li>
-			</ul>
-		</div>
-		<div class="main">
-			<section id="about" class="section">
-				<div class="boundary">
-					<header class="sectionHeader">
-						<h2 class="sectionHeaderTitle">个人简介</h2>
-						<h3 class="sectionHeaderSubtitle">关注细节，热爱学习</h3>
-					</header>
-					<div class="sectionBody">
-						<div class="introduction clearfix">
-							<div class="photo">
-								<img src="img/myPhoto.png" style="float: left;" />
-								<h2>韦红芳</h2>
-								<p class="color999 sex">性别:女 | 出生年月:1985-01 | 居住地:深圳</p>
-								长期从事前端开发工作，偏页面重构。在过去的两份工作中，基本都在制作网站和系统的HTML页面，非常熟悉页面重构。能熟练使用HTML5，CSS3和JS（jquery)，熟悉常见的浏览器兼容问题及其解决办法。 对于流行的前端开发框架，如Bootstrap、JQuery Mobile也能掌握。有网站、系统、手机端的界面设计经验。能使用git、svn等项目管理工具。非常热爱读书，主动关注和学习新技术。
-							</div>
-							<p class="color999 sm">说明：本人右腿残疾，残疾情况是不需要借助轮椅或拐杖可独立行走，走的不漂亮。如贵单位不接受与残障人士共事，请勿联系，谢谢:)</p>
-						</div>
-					</div>
-			</section>
-			<section id="tech" class="section" style="padding-top: 30px;">
-				<div class="boundary">
-					<header class="sectionHeader">
-						<h2 class="sectionHeaderTitle">擅长页面重构，熟悉前端</h2>
-						<h3 class="sectionHeaderSubtitle">4年工经验，有扎实的重构基础</h3>
-					</header>
-					<div class="sectionBody">
-						<dl class="tech">
-							<dd>
-								<h3>工具篇</h3>
-								<ul>
-									<li>
-										<tt>HBuilder</tt>
-										<span><i class="w90 black"></i></span>
-									</li>
-									<li>
-										<tt>Gulp</tt>
-										<span><i class="w80 blue"></i></span>
-									</li>
-									<li>
-										<tt>Firebug</tt>
-										<span><i class="w80 green"></i></span>
-									</li>
-									<li>
-										<tt>PhotoShop</tt>
-										<span><i class="w70 yellow"></i></span>
-									</li>
-									<li>
-										<tt>Git/SVN</tt>
-										<span><i class="w60 lightblue"></i></span>
-									</li>
-								</ul>
-							</dd>
-							<dd>
-								<h3>技能篇</h3>
-								<ul>
-									<li>
-										<tt>HTML（5）</tt>
-										<span><i class="w90 black"></i></span>
-									</li>
-									<li>
-										<tt>CSS（3）</tt>
-										<span><i class="w80 blue"></i></span>
-									</li>
-									<li>
-										<tt>JavaScript</tt>
-										<span><i class="w70 green"></i></span>
-									</li>
-									<li>
-										<tt>Sass</tt>
-										<span><i class="w60 yellow"></i></span>
-									</li>
-								</ul>
-							</dd>
-							<dd>
-								<h3>框架/库篇</h3>
-								<ul>
-									<li>
-										<tt>Jquery</tt>
-										<span><i class="w90 black"></i></span>
-									</li>
-									<li>
-										<tt>Bootstrap</tt>
-										<span><i class="w80 blue"></i></span>
-									</li>
-									<li>
-										<tt>JQuery Mobile</tt>
-										<span><i class="w70 green"></i></span>
-									</li>
-									<li>
-										<tt>ZeptoJS</tt>
-										<span><i class="w50 yellow"></i></span>
-									</li>
-								</ul>
-							</dd>
-							</ul>
-					</div>
-				</div>
-			</section>
-			<section id="experience" class="section">
-				<div class="boundary">
-					<header class="sectionHeader">
-						<h2 class="sectionHeaderTitle">长期专注页面重构</h2>
-						<h3 class="sectionHeaderSubtitle">能写高度还原设计图的静态页</h3>
-					</header>
-					<div class="sectionBody">
-						<div class="workExp">
-							<div class="timePoint">
-								<i></i>2014.04 — 2015.04
-							</div>
-							<section class="copany clearfix">
-								<header>
-									<h4>广西新豪智电子有限公司</h4>
-									<span>前端开发/网页设计</span>
-								</header>
-								<div class="copanyBody">
-									<ul class="list">
-										<li>临床生殖管理系统、综合报表管理平台等产品的页面重构工作，以及桂林市个人住房信息查询系统、广西地方法规库、梧州政务网上平台等项目的页面重构工作</li>
-										<li>界面设计</li>
-										<li>配合开发人员进行界面调整与优化</li>
-									</ul>
-								</div>
-							</section>
-							<div class="timePoint">
-								<i></i>2011.01 — 2014.01
-							</div>
-							<section class="copany clearfix">
-								<header>
-									<h4>深圳市残友软件有限公司</h4>
-									<span>前端开发/网页设计</span>
-								</header>
-								<div class="copanyBody">
-									<ul class="list">
-										<li>根据UI设计图，利用html+css准确呈现符合逻辑、便于开发的Web页面，保证多浏览器的兼容性</li>
-										<li>使用Bootstrap来制作响应式网站，业余时间自行学习此框架</li>
-										<li>参与对新人进行html+css的培训工作</li>
-									</ul>
-								</div>
-							</section>
-							<div class="timePoint">
-								<i></i>2006.09 — 2010.07
-							</div>
-							<section class="copany clearfix">
-								<header>
-									<h4>嘉应学院</h4>
-									<span>学生</span>
-								</header>
-							</section>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="works" class="section">
-				<div class="boundary">
-					<header class="sectionHeader">
-						<h2 class="sectionHeaderTitle">丰富的项目经验</h2>
-						<h3 class="sectionHeaderSubtitle">业余项目与公司项目相互促进</h3>
-					</header>
-					<div class="sectionBody clearfix">
-						<div class="company">
-							<h3 class="projectType">公司项目</h3>
-							<ul class="list">
-								<li><a href="http://www.chinanetcenter.com/" target="_blank">网宿科技官网</a></li>
-								<li><a href="http://mjsy.2000888.com/" target="_blank">民间摄影网</a></li>
-								<li><a href="http://ftcl.szft.gov.cn/" target="_blank">福田残联</a></li>
-								<li><a href="http://www.hcyco.cn/zhuanti/index.html" target="_blank">汇成洋活动专题</a></li>
-								<li><a href="http://www.rcatc.cn" target="_blank">深圳市残疾人辅助器具资源中心</a></li>
-								<li><a href="http://www.hljkkj.com/" target="_blank">慧疗健康</a></li>
-								<li><a href="http://www.gxxhz.com/" target="_blank">广西新豪智电子有限公司官网</a></li>
-								<li><a href="http://116.1.214.98:85/index.jsp" target="_blank">投诉举报信箱</a></li>
-								<li><a href="http://www.gxysyjy.cn" target="_blank">广西民族文化艺术研究院</a></li>
-								<li><a href="http://zjc.gxmu.edu.cn/" target="_blank">广西医科大学招生就业网</a></li>
-							</ul>
-						</div>
-						<div class="person">
-							<h3 class="projectType">业余项目</h3>
-							<div class="personLink">
-								<a href="http://weihf.github.io/pageGuide/">
-									<p>白天求生存</p>
-									<p>晚上谋发展</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-			</section>
-		</div>
-		<footer class="footer">
-			<div class="boundary clearfix">
-				<div class="qrcode clearfix">
-					<img src="img/qrcode.png" />
-					<p>您还可以使用手机或iPad
-						<br>扫描左侧二维码打开本页</p>
-				</div>
-			</div>
-		</footer>
-		<a id="backTop" title="Back To The Top">返回<br />顶部</a>
-	</body>
+        {% for page in (1..paginator.total_pages) %} 
+            {% if page == paginator.page %}
+                <span class="pageNum active">{{ page }}</span> 
+            {% elsif page == 1 %}
+                <a class="pageNum" href="{{ '/index.html' | prepend: site.baseurl}}">{{ page }}</a> 
+            {% else %}
+                <a class="pageNum" href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', page }}/index.html">{{ page }}</a> 
+            {% endif %} 
+        {% endfor %} 
 
-</html>
+        {% if paginator.next_page %}
+            <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl }}"></a> 
+        {% endif %}
+    </div>
+    {% endif %}
+    
+</div>

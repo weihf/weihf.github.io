@@ -1,0 +1,16 @@
+# Site settings
+encoding: utf-8
+title: Weihf
+description: 韦红芳的个人博客
+baseurl: "/jekyll_demo" 
+# baseurl: ''
+github_username:  weihf
+paginate: 8
+paginate_path: "/page:num"
+footer_github: "GitHub"
+footer_resume: "简历"
+footer_resume_site: "http://weihf.github.io/"
+footer_demo: "demo"
+footer_demo_site: "http://weihf.github.io/pageGuide"
+port: 4000
+gems: [jekyll-paginate]
