@@ -9,8 +9,8 @@ paginate: 8
 paginate_path: "/page:num"
 footer_github: "GitHub"
 footer_resume: "简历"
-footer_resume_site: "http://weihf.github.io/"
+footer_resume_site: "https://weihf.github.io/aboutme/"
 footer_demo: "demo"
-footer_demo_site: "http://weihf.github.io/pageGuide"
+footer_demo_site: "https://weihf.github.io/pageGuide/"
 port: 4000
 gems: [jekyll-paginate]
